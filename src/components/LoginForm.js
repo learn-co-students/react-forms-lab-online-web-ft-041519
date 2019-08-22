@@ -20,11 +20,10 @@ class LoginForm extends React.Component {
 
   callLogin = (event) => {
     event.preventDefault()
-    console.log(`username: ${this.state.username}`)
     if (!this.state.username || !this.state.password) {
-      return
+
     } else {
-      this.props.handleLogin({ username: this.state.username, password: this.state.password })
+      return this.props.handleLogin(this.state)
     }
   }
 
